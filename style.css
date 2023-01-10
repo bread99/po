@@ -1,0 +1,119 @@
+* {
+  /** 모든 요소에 border-box 적용 */
+  box-sizing: border-box;
+  text-decoration-line: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #404258;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+.form__textbox {
+  width: 100%;
+  height: 6rem;
+}
+.form__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discussion__container {
+  /** list-style은 display:list-item이 있는 요소에만 적용 따라서 display:flex를 만들어서 list-style 제거 */
+  display: flex;
+  /* flex-item들을 균일한 간격으로 만들기 */
+  justify-content: space-between;
+  /** 넓이를 540px로 설정 */
+  width: 540px;
+  background-color: #474e68;
+  margin: 3px;
+}
+/* 왼쪽 아바타
+아바타 사진을 인스타그램 프로필 사진처럼 동그랗게 표현하세요.
+아바타 사진의 너비를 48px로 설정하세요.
+아바타 사진이 Discussion 컴포넌트 높이의 중간에 오도록 정렬합니다. */
+.discussion__avatar--wrapper {
+  /* 가로정렬  */
+  display: flex;
+  width: 15%;
+  /**플렉스아이템을 교차축의 중간에 오게 한다  */
+  align-items: center;
+  justify-content: center;
+}
+.discussion__avatar--image {
+  /** 이미지를 둥글게 한다  */
+  border-radius: 50%;
+  /** 넓이를 48px로 설정  */
+  width: 48px;
+}
+/* 중간 Discussion 콘텐츠
+Discussion 제목과 저자, 생성일간에 간격을 충분히 줍니다.
+저자, 생성일을 함께 작성하고, 오른쪽 정렬하여 오른쪽에 붙입니다. */
+.discussion__content {
+  /* 가로정렬 */
+  display: flex;
+  /* 줄바꿈 */
+  flex-wrap: wrap;
+  /* 넓이는 부모요소의 70% */
+  width: 75%;
+  padding: 0 1rem;
+  background-color: #50577a;
+}
+h2 {
+  font-size: 1rem;
+}
+.discussion__content .discussion__information {
+  display: flex;
+  /* 넓이는 부모요소의 100% */
+  width: 100%;
+  /** 오른쪽 정렬 */
+  justify-content: right;
+  font-size: 0.75rem;
+}
+/* 오른쪽 체크 표시
+체크 표시가 Discussion 컴포넌트 높이의 중간에 오도록 정렬합니다.
+ */
+.discussion__answered {
+  /* 가로정렬 */
+  display: flex;
+  /* 넓이를 부모요소의 15% 설정 */
+  width: 10%;
+  /** 교차축 중간에 오도록 정렬 */
+  align-items: center;
+  /* 메인축 중간에 오도록 정렬 */
+  justify-content: center;
+}
+
+.input {
+  color: white;
+  background-color: #212121;
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 90px;
+  width: 200px;
+  font-size: 0.75rem;
+  height: 40px;
+  padding: 10px;
+  /* text-align: center; */
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 2px;
+  /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
+.input:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
