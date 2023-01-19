@@ -8,6 +8,7 @@ if (dataFromLocalStorage) {
   data = JSON.parse(dataFromLocalStorage);
 } else {
   data = agoraStatesDiscussions.slice();
+  
 }
 
 const convertToDiscussion = (obj) => {
