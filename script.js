@@ -7,7 +7,7 @@ const dataFromLocalStorage = localStorage.getItem("agoraStatesDiscussions");
 if (dataFromLocalStorage) {
   data = JSON.parse(dataFromLocalStorage);
 } else {
-  data = agoraStatesDiscussions.slice();  
+  data = agoraStatesDiscussions.slice();   
 }
 
 const convertToDiscussion = (obj) => {
