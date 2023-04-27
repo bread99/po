@@ -8,7 +8,7 @@ if (dataFromLocalStorage) {
   data = JSON.parse(dataFromLocalStorage);
 } else {
   data = agoraStatesDiscussions.slice();    
-}
+} 
 
 const convertToDiscussion = (obj) => {
   const li = document.createElement("li"); // li 요소 생성
